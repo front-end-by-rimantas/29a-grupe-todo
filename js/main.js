@@ -1,6 +1,8 @@
 import { Form } from "./components/form/Form.js";
+import { Todo } from "./components/todo/Todo.js";
 
 const form = new Form('body');
-form.init();
+const tasks = new Todo('body');
 
-console.log(form);
+form.init();
+tasks.init();
