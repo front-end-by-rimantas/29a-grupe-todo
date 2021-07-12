@@ -8,6 +8,8 @@ class Form {
         this.dateDOM = null;
         this.completedDOM = null;
         this.saveButtonDOM = null;
+
+        this.saveButtonCallback = null;
     }
 
     init() {
@@ -79,7 +81,7 @@ class Form {
             const completed = this.completedDOM.checked;
 
             if (this.isValidTask(message, color, date, completed)) {
-                console.log('task is valid...');
+                this.saveButtonCallback(message, color, date, completed);
             } else {
                 console.log('task is NOT valid...');
             }
