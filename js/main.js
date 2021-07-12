@@ -6,3 +6,5 @@ const tasks = new Todo('body');
 
 form.init();
 tasks.init();
+
+tasks.createCard('Kortele veikia', '#36f', '2030-12-31', true);
